@@ -12,10 +12,19 @@
         {% block navbar %}
         <nav style="background-color: #cccccc;">
             <ul style="list-style: none; display: flex;">
-                <li style="margin-right: 20px; border: 1px solid grey; padding: 20px;"><a href="{{ path('homepage') }}">Home</a></li>
+                <li style="margin-right: 20px; border: 1px solid grey; padding: 20px;"><a href="{{ path('homepage') }}">
+                       {{ 'NAV.HOME'|trans }}
+                    </a></li>
                 {#<li style="margin-right:20px; border: 1px solid grey; padding: 20px;"><a href="{{ path('terms of services') }}">Terms</a></li>#}
-                <li style="margin-right: 20px; border: 1px solid grey; padding: 20px;"><a href="/terms">Terms</a></li>
-                <li style="border: 1px solid grey; padding: 20px;"><a href="{{ path('app_login') }}">Login</a></li>
+                <li style="margin-right: 20px; border: 1px solid grey; padding: 20px;"><a href="/terms">
+                        {{ 'NAV.TERMS'|trans }}
+                    </a></li>
+                <li style="margin-right: 20px; border: 1px solid grey; padding: 20px;"><a href="{{ path('app_login') }}">
+                        {{ 'NAV.LOGIN'|trans }}
+                    </a></li>
+                <li style="border: 1px solid grey; padding: 20px;"><a href="{{ path('app_register') }}">
+                        {{ 'NAV.REGISTER'|trans }}
+                    </a></li>
             </ul>
         </nav>
 

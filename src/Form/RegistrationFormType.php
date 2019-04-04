@@ -21,21 +21,24 @@ class RegistrationFormType extends AbstractType
     {
         $builder
 //
-            ->add('username' , TextType::class, ['label' => 'Username'])
+            ->add('username' , TextType::class, ['label' => 'FORM.USER.USERNAME.LABEL'])
             ->add(
                 'password',
                 RepeatedType::class,
                 [
                     'type'=>PasswordType::class,
                     'invalid_message' => 'Password must match',
-                    'first_options' => ['label' => 'Password'],
-                    'second_options' => ['label' => 'Repeat password']
+                    'first_options' => ['label' => 'FORM.USER.PASSWORD.LABEL'],
+                    'second_options' => ['label' => 'FORM.USER.PASSWORD.LABEL2']
                 ]
-                )->add('email', EmailType::class)
+                )->add(
+                    'email',
+                    EmailType::class,
+                    ['label'=> 'FORM.USER.EMAIL.LABEL'])
                 ->add(
                     'termAccepted',
                     CheckboxType::class,
-                    ['label'=>'Accept term of service']
+                    ['label'=>'FORM.USER.TOS.LABEL']
                  );
             if ($options['standalone']) {
                 $builder->add('Submit', SubmitType::class);

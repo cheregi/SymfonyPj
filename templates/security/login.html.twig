@@ -8,10 +8,10 @@
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputUsername" class="sr-only">Username</label>
+    <h1 class="h3 mb-3 font-weight-normal">{{ 'LOGIN.INFO'|trans }}</h1>
+<label for="inputUsername" class="sr-only">{{ 'LOGIN.USERNAME.LABEL'|trans }}</label>
     <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
+    <label for="inputPassword" class="sr-only">{{ 'LOGIN.PASSWORD.LABEL'|trans }}</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
     <input type="hidden" name="_csrf_token"
@@ -30,7 +30,7 @@
     #}
 
     <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
+        {{ 'LOGIN.SUBMIT'|trans }}
     </button>
 </form>
 {% endblock %}
