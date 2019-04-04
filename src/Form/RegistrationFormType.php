@@ -27,7 +27,7 @@ class RegistrationFormType extends AbstractType
                 RepeatedType::class,
                 [
                     'type'=>PasswordType::class,
-                    'invalid_message' => 'Password must match',
+                    'invalid_message' => '"FORM.USER.PASSWORD.ERROR"',
                     'first_options' => ['label' => 'FORM.USER.PASSWORD.LABEL'],
                     'second_options' => ['label' => 'FORM.USER.PASSWORD.LABEL2']
                 ]
