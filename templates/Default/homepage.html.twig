@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Home{% endblock %}
+
+{% block body %}
+
+    <p>The color of the day is: {{ color|default('red') }}</p>
+    <div>
+
+    </div>
+
+    {% set itemList =[1,2,50,8,7,654,24] %}
+    {% set currentDate = date() %}
+
+    {{ currentDate|date('Y-m-d H:i:s')|upper|raw }}
+    <ul>
+    {% for item in itemList %}
+        {% if item is odd %}
+           <li>{{ item }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+    {% for i in range(0,10) %}
+        {% if loop.last %}
+        <br>
+        {% endif %}
+        {{ i }}
+    {% endfor %}
+
+    {% endblock %}
+
