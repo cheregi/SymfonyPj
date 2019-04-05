@@ -24,6 +24,8 @@ FORM:
             LABEL: 'Password'
         USERNAME:
             LABEL: 'Username'
+        SUBMIT:
+            LABEL: 'Submit'
 MAIL:
     REGISTER:
         TITLE:      'Activate your account'
@@ -35,3 +37,7 @@ MAIL:
         TXT:
             LINK:
                 INFO:  'please copy this link in your browser'
+REGISTRATION:
+    ACTIVATION:
+        TITLE:  'Numeripic - activation needed'
+        INFO:   'Your account was created, please check your email account to activate ❤'

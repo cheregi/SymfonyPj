@@ -41,7 +41,16 @@ class RegistrationFormType extends AbstractType
                     ['label'=>'FORM.USER.TOS.LABEL']
                  );
             if ($options['standalone']) {
-                $builder->add('Submit', SubmitType::class);
+                $builder->add(
+                    'Submit',
+                    SubmitType::class,
+                    [
+                        'label'=> 'FORM.USER.SUBMIT.LABEL',
+                        'attr' =>[
+                            'class'=> 'btn-success'
+                        ]
+                    ]
+                );
             }
 
     }
