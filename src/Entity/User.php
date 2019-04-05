@@ -62,6 +62,27 @@ class User implements UserInterface
     private $termAccepted;
 
     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $active;
+
+    /**
+     * @return mixed
+     */
+    public function isActive()
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param mixed $active
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+    }
+
+    /**
      * @ORM\Column(type="guid", nullable=true, unique=true)
      */
     private $activationToken;

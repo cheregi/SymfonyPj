@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190403123221 extends AbstractMigration
+final class Version20190405080549 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,10 +22,8 @@ final class Version20190403123221 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE picture CHANGE id id CHAR(36) NOT NULL COMMENT \'(DC2Type:guid)\'');
         $this->addSql('CREATE INDEX creation_date ON picture (created_at)');
-        $this->addSql('ALTER TABLE picture_user CHANGE picture_id picture_id CHAR(36) NOT NULL COMMENT \'(DC2Type:guid)\'');
-        $this->addSql('ALTER TABLE picture_tag CHANGE picture_id picture_id CHAR(36) NOT NULL COMMENT \'(DC2Type:guid)\'');
+        $this->addSql('ALTER TABLE user ADD active TINYINT(1) DEFAULT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -34,8 +32,6 @@ final class Version20190403123221 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('DROP INDEX creation_date ON picture');
-        $this->addSql('ALTER TABLE picture CHANGE id id INT NOT NULL');
-        $this->addSql('ALTER TABLE picture_tag CHANGE picture_id picture_id INT NOT NULL');
-        $this->addSql('ALTER TABLE picture_user CHANGE picture_id picture_id INT NOT NULL');
+        $this->addSql('ALTER TABLE user DROP active');
     }
 }

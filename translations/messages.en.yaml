@@ -16,7 +16,7 @@ LOGIN:
 FORM:
     USER:
         TOS:
-            LABEL: 'Accept terms of service'
+            LABEL: 'Accept term of service'
         EMAIL:
             LABEL: 'Email'
         PASSWORD:
@@ -24,3 +24,14 @@ FORM:
             LABEL: 'Password'
         USERNAME:
             LABEL: 'Username'
+MAIL:
+    REGISTER:
+        TITLE:      'Activate your account'
+        INFO:       'Hi %name% your account was successfully created on Numeripic!'
+        HTML:
+            LINK:
+                INFO:   'Please click!'
+                LABEL:  'on this link'
+        TXT:
+            LINK:
+                INFO:  'please copy this link in your browser'
