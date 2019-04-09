@@ -7,6 +7,7 @@ NAV:
     REGISTER:   'Register'
     LOGOUT:     'Logout'
     LOGGED_AS:  'Logged as %name%'
+    ADD_PICTURE:    'New picture'
 
 LOGIN:
     INFO:       'Please sign in'
@@ -26,6 +27,15 @@ FORM:
             LABEL: 'Password'
         USERNAME:
             LABEL: 'Username'
+    PICTURE:
+        TITLE:
+            LABEL:  'Add a title'
+        DESCRIPTION:
+            LABEL:  'Description'
+        TAGS:
+            LABEL:  'Tags'
+        FILE:
+            LABEL:  'Choose a picture'
         SUBMIT:
             LABEL: 'Submit'
 MAIL:

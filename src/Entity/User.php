@@ -82,6 +82,7 @@ class User implements UserInterface
     public function setActive($active)
     {
         $this->active = $active;
+        return $this;
     }
 
     /**

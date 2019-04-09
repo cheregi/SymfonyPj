@@ -65,13 +65,19 @@ class Picture
      */
     private $tags;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $mimeType;
+
     public function __construct()
     {
         $this->lovers = new ArrayCollection();
         $this->tags = new ArrayCollection();
+        $this->createdAt= new \DateTime();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -208,6 +214,18 @@ class Picture
         if ($this->tags->contains($tag)) {
             $this->tags->removeElement($tag);
         }
+
+        return $this;
+    }
+
+    public function getMimeType(): ?string
+    {
+        return $this->mimeType;
+    }
+
+    public function setMimeType(string $mimeType): self
+    {
+        $this->mimeType = $mimeType;
 
         return $this;
     }

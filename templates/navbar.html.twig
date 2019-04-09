@@ -24,6 +24,11 @@
                         {{ 'NAV.TERMS'|trans }}
                     </a>
                 </li>
+                <li style="margin-right: 20px; border: 1px solid grey; padding: 20px;">
+                    <a href="/add/picture">
+                        {{ 'NAV.ADD_PICTURE'|trans }}
+                    </a>
+                </li>
                 {% if  is_granted('IS_AUTHENTICATED_FULLY')%}
                     <li class="nav-item" style="margin-right: 20px; border: 1px solid grey; padding: 20px;">
                         {{ 'NAV.LOGGED_AS'|trans({'%name%' : app.user.username}) }}

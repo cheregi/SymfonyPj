@@ -39,7 +39,7 @@ class PictureFormType extends AbstractType
                     'mapped' => false,
                     'constraints' => [
                         new Image([
-                            'mimeTypes' => ['image/png', 'image/jpg'],
+                            'mimeTypes' => ['image/png', 'image/jpeg'],
                             'maxSize' => '5M',
                             'maxWidth' => 640,
                             'minHeight' => 640
