@@ -1,3 +1,7 @@
+label_previous: 'Previous page'
+label_next: 'Next page'
+HOME:
+    ITEM_COUNT: 'Total pictures count : '
 APP:
     NAME: 'Numeripic'
 NAV:

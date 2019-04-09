@@ -5,7 +5,7 @@
 {% block body %}
 
     <div class="row mt-2">
-        {% for picture in picture %}
+        {% for picture in pictures %}
             <div class="card col-4 mx-2">
                 <img src="{{ path('get_picture_content', {'picture': picture.getId()}) }}"
                      class="card-img-top"
@@ -23,7 +23,14 @@
                 </div>
             </div>
         {% endfor %}
-    </div>
+            </div>
+
+            <div class="count my-4">
+                {{ 'HOME.ITEM_COUNT'|trans }}{{ pictures.getTotalItemCount }}
+            </div>
+            <div class="navigation">
+                {{ knp_pagination_render(pictures) }}
+            </div>
 
     <p>The color of the day is: {{ color|default('red') }}</p>
 
