@@ -1,0 +1,7 @@
+{% macro link(routeName, label) %}
+    <li class="nav-item{% app.request.get('_route')==routeName %} active></li>
+    <a class="nav-link" href="{{ path(routeName) }}">
+    {{ label|trans }}
+    /*here is supposed to be "link bla bla" -> check the navbar.html.twig file*/
+    </a>
+{% endmacro %}
